@@ -34,10 +34,11 @@
 
     <script src="./js/jquery-3.6.0.min.js"></script>
     <script>
-        $("img").wrap("<div class='img-wrap'></div>");
+        // $("img").wrap("<div class='img-wrap'></div>");
         // 個別用imgg-wrap包起來
-        $("img").unwrap();
-         // 再解除
+        // $("img").unwrap();
+        // 再解除
+        $("img").wrapAll("<div class='img-wrap'></div>");
     </script>
 </body>
 
