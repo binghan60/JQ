@@ -1,37 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>text</title>
-        <style>
-            span {
-                color: green;
-            }
-        </style>
-    </head>
-    <body>
-        <button id="getText">get text</button>
 
-        <h1 id="sample">
-            Hello
-            <span>World123</span>
-        </h1>
-        <h1 id="result"></h1>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>text</title>
+    <style>
+        span {
+            color: green;
+        }
+    </style>
+</head>
 
-        <script src="./js/jquery-3.6.0.min.js"></script>
-        <script>
-            // InnerText
-            // const sampleText = $("#sample").text();
-            // $("#result").text(sampleText);
+<body>
+    <button id="getText">get text</button>
 
-            // InnerHTML
-            // const sampleHtml = $("#sample").html();
-            // $("#result").html(sampleText);
+    <h1 id="sample">
+        Hello
+        <span>World123</span>
+    </h1>
+    <h1 id="result"></h1>
 
-            const sampleHtml = $("#sample").html();
-            $("#result").text(sampleHtml);
-        </script>
-    </body>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script>
+        // InnerText
+        // const sampleText = $("#sample").text();
+        // $("#result").text(sampleText);
+        // 純文字不會抓到標籤
+
+        // InnerHTML
+        // const sampleHtml = $("#sample").html();
+        // $("#result").html(sampleText);
+        // 複製HTML包含標籤
+
+        const sampleHtml = $("#sample").html();
+        $("#result").text(sampleHtml);
+        // HTML轉TEXT 把標籤跟文字一起以文字印出來
+    </script>
+</body>
+
 </html>
