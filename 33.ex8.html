@@ -10,6 +10,7 @@
             body {
                 margin: 0;
                 height: 300vh;
+                transition: 1s;
             }
             .wrap {
                 width: 100%;
@@ -35,18 +36,24 @@
         <script>
             $(window).scroll(function () {
                 console.log("scrollTop:", $(window).scrollTop());
-                console.log("body Height", $("body").height());
-                console.log(
-                    "%",
-                    $(window).scrollTop() /
-                        ($("body").height() - $(window).height())
-                );
+                // console.log("body Height", $("body").height());
+                // console.log(
+                //     "%",
+                //     $(window).scrollTop() /
+                //         ($("body").height() - $(window).height())
+                // );
                 const percentage =
                     ($(window).scrollTop() /
                         ($("body").height() - $(window).height())) *
                     100;
 
                 $(".progressBar").css("width", `${percentage}%`);
+
+                if ($(window).scrollTop() > 450) {
+                    $("body").css("background", "orange");
+                } else {
+                    $("body").css("background", "transparent");
+                }
             });
         </script>
     </body>
