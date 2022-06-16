@@ -1,33 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>off</title>
-    </head>
-    <body>
-        <button id="sayHi">Hi</button>
-        <button id="on">on</button>
-        <button id="off">off</button>
 
-        <script src="./js/jquery-3.6.0.min.js"></script>
-        <script>
-            // $("#sayHi").click(function () {
-            //     console.log("hi");
-            // });
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>off</title>
+</head>
 
-            const sayHi = function () {
-                console.log("hi");
-            };
+<body>
+    <button id="sayHi">Hi</button>
+    <button id="on">on</button>
+    <button id="off">off</button>
 
-            $("#on").click(function () {
-                $("#sayHi").click(sayHi);
-            });
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script>
+        // $("#sayHi").click(function () {
+        //     console.log("hi");
+        // });
 
-            $("#off").click(function () {
-                $("#sayHi").off("click", sayHi);
-            });
-        </script>
-    </body>
+        const sayHi = function () {
+            console.log("hi");
+        };
+
+        $("#on").click(function () {
+            $("#sayHi").click(sayHi);
+        });
+        // 按一下綁定一次
+        $("#off").click(function () {
+            $("#sayHi").off("click", sayHi);
+        });
+            // 一次可解除多重綁定
+    </script>
+</body>
+
 </html>
