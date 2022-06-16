@@ -14,20 +14,36 @@
         </style>
     </head>
     <body>
-        <div class="box"></div>
+        <div class="box">box</div>
 
         <script src="./js/jquery-3.6.0.min.js"></script>
         <script>
             console.log($(".box").css("background"));
+            var style = {
+                color: "#fff",
+                background: "#000",
+            };
+
+            var style2 = {
+                color: "blue",
+                background: "green",
+            };
+
+            $(".box").css(style);
+
             $(".box").click(function () {
-                if (
-                    $(".box").css("background-color") === "rgb(170, 255, 170)"
-                ) {
-                    $(".box").css("background-color", "red");
-                } else {
-                    $(".box").css("background-color", "#afa");
-                }
+                $(this).css("width", "+=100");
             });
+
+            // $(".box").click(function () {
+            //     if (
+            //         $(".box").css("background-color") === "rgb(170, 255, 170)"
+            //     ) {
+            //         $(".box").css("background-color", "red");
+            //     } else {
+            //         $(".box").css("background-color", "#afa");
+            //     }
+            // });
         </script>
     </body>
 </html>
