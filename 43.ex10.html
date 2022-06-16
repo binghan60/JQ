@@ -69,29 +69,16 @@
         // })
 
         $(".btn").click(function () {
+            console.log("this", $(this).is(":contains('S')"));
+            $(this).addClass("active").siblings().removeClass("active");
             if ($(this).is(":contains('S')")) {
-
-                $(".par").removeClass("fontM")
-                $(".par").removeClass("fontL")
-                $(".par").addClass("fontS")
+                $("p").removeClass().addClass("fontS");
             }
-        });
-        $(".btn").click(function () {
-            console.log("this", $(this).is(":contains('M')"));
             if ($(this).is(":contains('M')")) {
-
-                $(".par").removeClass("fontS")
-                $(".par").removeClass("fontL")
-                $(".par").addClass("fontM")
+                $("p").removeClass().addClass("fontM");
             }
-        });
-        $(".btn").click(function () {
             if ($(this).is(":contains('L')")) {
-
-                console.log("this", $(this).is(":contains('L')"));
-                $(".par").removeClass("fontS")
-                $(".par").removeClass("fontM")
-                $(".par").addClass("fontL")
+                $("p").removeClass().addClass("fontL");
             }
         });
 
