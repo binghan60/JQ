@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex10</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous" />
+    <style>
+        .fontS {
+            font-size: 0.8rem;
+        }
+
+        .fontM {
+            font-size: 1rem;
+        }
+
+        .fontL {
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="d-flex justify-content-end">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button id="small" type="button" class="btn btn-secondary">S</button>
+                <button id="medium" type="button" class="btn btn-secondary active">
+                    M
+                </button>
+                <button id="large" type="button" class="btn btn-secondary">L</button>
+            </div>
+        </div>
+
+        <h2>jQuery</h2>
+        <p class="par">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+            ipsum doloribus iusto sapiente repellat perferendis totam autem
+            sequi, reprehenderit repudiandae, impedit soluta quod maiores
+            sint tenetur, aut aperiam? Odio, labore!
+        </p>
+        <p class="par">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+            ipsum doloribus iusto sapiente repellat perferendis totam autem
+            sequi, reprehenderit repudiandae, impedit soluta quod maiores
+            sint tenetur, aut aperiam? Odio, labore!
+        </p>
+    </div>
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script>
+        // $("#small").click(function () {
+        //     $(".par").removeClass("fontM")
+        //     $(".par").removeClass("fontL")
+        //     $(".par").addClass("fontS")
+        // })
+        // $("#medium").click(function () {
+        //     $(".par").removeClass("fontS")
+        //     $(".par").removeClass("fontL")
+        //     $(".par").addClass("fontM")
+        // })
+        // $("#large").click(function () {
+        //     $(".par").removeClass("fontS")
+        //     $(".par").removeClass("fontM")
+        //     $(".par").addClass("fontL")
+        // })
+
+        $(".btn").click(function () {
+            if ($(this).is(":contains('S')")) {
+
+                $(".par").removeClass("fontM")
+                $(".par").removeClass("fontL")
+                $(".par").addClass("fontS")
+            }
+        });
+        $(".btn").click(function () {
+            console.log("this", $(this).is(":contains('M')"));
+            if ($(this).is(":contains('M')")) {
+
+                $(".par").removeClass("fontS")
+                $(".par").removeClass("fontL")
+                $(".par").addClass("fontM")
+            }
+        });
+        $(".btn").click(function () {
+            if ($(this).is(":contains('L')")) {
+
+                console.log("this", $(this).is(":contains('L')"));
+                $(".par").removeClass("fontS")
+                $(".par").removeClass("fontM")
+                $(".par").addClass("fontL")
+            }
+        });
+
+    </script>
+</body>
+
+</html>
