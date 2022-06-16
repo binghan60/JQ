@@ -11,10 +11,11 @@
     <style>
         li {
             list-style: none;
+            border-radius: 50%;
         }
 
         ul li img {
-            border: 1px solid tra;
+            /* border: 1px solid tra; */
             border-radius: 50%;
         }
     </style>
@@ -42,10 +43,13 @@
     </div>
     <script src="./js/jquery-3.6.0.min.js"></script>
     <script>
-        $("ul li img").click(function (e) {
-            $(e.currentTarget).attr("style", "border:5px solid red")
+        $("ul li").click(function (e) {
+            // console.log(e.target)
+            // console.log(e.currentTarget)
 
-            $(e.currentTarget).siblings().attr("style", "border:5px solid transparent")
+            $(e.currentTarget).attr("style", "outline:5px solid red")
+
+            $(e.currentTarget).siblings().attr("style", "outline:5px solid transparent")
         })
     </script>
 </body>
