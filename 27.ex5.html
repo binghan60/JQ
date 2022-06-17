@@ -2,66 +2,75 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <style>
-
-    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex5</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous" />
 </head>
 
 <body>
-    <div class="container mt-5">
-        <table class="table">
-            <tbody>
+    <div class="container">
+        <div class="row">
+            <table class="table table-bordered mt-3">
                 <tr>
-                    <td><input type="checkbox" value="1" name="1" checked="true"></td>
-                    <td id="mark">Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td>Elon Musk</td>
+                    <td>ElonMusk@gmail.com</td>
+                    <td>0912345678</td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox" value="2" name="2"></td>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat12222</td>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td>Elon Musk</td>
+                    <td>ElonMusk@gmail.com</td>
+                    <td>0912345678</td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox" value="3" name="3"></td>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter12121212</td>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td>Elon Musk</td>
+                    <td>ElonMusk@gmail.com</td>
+                    <td>0912345678</td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox" value="4" name="4"></td>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@sha384-1BmE4kWBq78iYh</td>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td>Elon Musk</td>
+                    <td>ElonMusk@gmail.com</td>
+                    <td>0912345678</td>
                 </tr>
-                <tr>
-                    <td><input type="checkbox" value="5" name="5"></td>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter12121212</td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" value="6" name="6"></td>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat12222</td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" value="7" name="7"></td>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter111221</td>
-                </tr>
-            </tbody>
-        </table>
+            </table>
+        </div>
     </div>
+
     <script src="./js/jquery-3.6.0.min.js"></script>
     <script>
-        console.log($("table tr td").attr(checked))
+        $(":checkbox").click(function () {
+            console.log("hi", $(this).prop("checked"));
+
+            if ($(this).prop("checked")) {
+                $(this).parent().parent().css("background", "lightblue");
+            } else {
+                $(this).parent().parent().css("background", "transparent");
+            }
+
+            // if (
+            //     $(this).parent().parent().css("background-color") ===
+            //     "rgb(173, 216, 230)"
+            // ) {
+            //     $(this).parent().parent().css("background", "transparent");
+            // } else {
+            //     $(this).parent().parent().css("background", "lightblue");
+            // }
+            // console.log($(this).parent().parent().css("background-color"));
+        });
     </script>
 </body>
 
